@@ -1,0 +1,21 @@
+*{
+    font-family: 'Mali', cursive;
+}
+h2{
+    font-family: 'Mali', cursive;
+    text-align: center;
+}
+th{
+    text-align: center;
+}
+red {
+    background-color: #ff0000;
+}
+.cont-btn {
+    display: flex;
+    align-items: flex-end;
+    height: 58px;
+    position: relative;
+    left: 55px;
+    bottom: 0;
+}

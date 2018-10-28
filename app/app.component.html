@@ -1,0 +1,35 @@
+<!-- Раельзовать поиск через выпадающий список-->
+<h2>Учебный проект №1 по Angular</h2>
+<table class="table table-striped">
+	<tbody>
+		<tr *ngFor="let prod of ProductsList" [ngStyle]="StylesColor(prod)">
+			<th>
+				{{prod.id}}
+			</th>
+			<th>
+				{{prod.name}}
+			</th>
+			<th>
+				{{prod.price}}
+			</th>
+			<th>
+				<button (click)="onRemove(prod)" class="btn btn-danger">Удалить</button>
+			</th>
+		</tr>
+	</tbody>
+</table>
+<div class="col-md-3">
+	Введите идентификатор
+	<input type="text" id="id" [(ngModel)]="id" class="form-control"/>
+</div>
+<div class="col-md-3">
+	Введите название
+	<input type="text" id="name" [(ngModel)]="name" class="form-control"/>
+</div>
+<div class="col-md-3">
+	Введите цену
+	<input type="text" id="price" [(ngModel)]="price" class="form-control"/>
+</div>
+<div class="cont-btn col-md-3">
+	<input type="button" class="btn btn-primary" value="Добавить" (click)="addItem(id, name, price)">
+</div>
